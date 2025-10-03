@@ -218,7 +218,7 @@ async def cookies_handler(client: Client, m: Message):
             target_file.write(cookies_content)
 
         await input_message.reply_text(
-            "✅ Cookies updated successfully.\n📂 Saved in `youtube_cookies.txt`."
+            "✅ Cookies updated successfully😉.\n📂 Saved in `youtube_cookies.txt`."
         )
 
     except Exception as e:
