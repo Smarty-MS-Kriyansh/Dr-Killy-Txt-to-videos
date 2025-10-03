@@ -1,5 +1,5 @@
 <h1 align="center">
- @@SmartBoy_ApnaMS
+ @SmartBoy_ApnaMS
 </h1>
 
 <p align="center">
