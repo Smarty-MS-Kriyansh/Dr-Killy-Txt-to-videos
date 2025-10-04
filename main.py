@@ -330,7 +330,7 @@ async def yt2m_handler(bot: Client, m: Message):
     input: Message = await bot.listen(editable.chat.id)
     youtube_link = input.text.strip()
     await input.delete(True)
-    Show = f"**⚡Dᴏᴡɴʟᴏᴀᴅ Sᴛᴀʀᴛᴇᴅ...⏳**\n\n🔗𝐔𝐑𝐋 »  {youtube_link}\n\n✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ {@SmartBoy_ApnaMS}🐦"
+    Show = f"**⚡Dᴏᴡɴʟᴏᴀᴅ Sᴛᴀʀᴛᴇᴅ...⏳**\n\n🔗𝐔𝐑𝐋 »  {youtube_link}\n\n✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ {CREDIT}🐦"
     await editable.edit(Show, disable_web_page_preview=True)
     await asyncio.sleep(10)
     try:
