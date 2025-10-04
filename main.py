@@ -63,10 +63,10 @@ photozip = 'https://envs.sh/cD_.jpg'
 
 
 # Inline keyboard for start command
-BUTTONSCONTACT = InlineKeyboardMarkup([[InlineKeyboardButton(text="📞 Contact", url="https://t.me/DR_CYRUS_0")]])
+BUTTONSCONTACT = InlineKeyboardMarkup([[InlineKeyboardButton(text="📞 Contact", url="https://t.me/SmartBoy_ApnaMS")]])
 keyboard = InlineKeyboardMarkup(
     [
-        [InlineKeyboardButton(text="🛠️ Help", url="https://t.me/DR_CYRUS_0"), InlineKeyboardButton(text="🛠️ Repo", url="https://files.catbox.moe/70e6bi.jpg")],
+        [InlineKeyboardButton(text="🛠️ Help", url="https://t.me/NEET_Saathi"), InlineKeyboardButton(text="🛠️ Repo", url="https://files.catbox.moe/70e6bi.jpg")],
     ]
 )
 
@@ -112,7 +112,7 @@ async def remove_auth_user(client: Client, message: Message):
             AUTH_USERS.remove(user_id_to_remove)
             await message.reply_text(f"**User ID `{user_id_to_remove}` removed from authorized users.**")
     except (IndexError, ValueError):
-        await message.reply_text("**Please provide a valid user ID.**")
+        await message.reply_text("**Please provide a valid user ID😕.**")
 
 
 @bot.on_message(filters.command("broadcast") & filters.private)
@@ -348,15 +348,15 @@ async def yt2m_handler(bot: Client, m: Message):
                 print(f"File {name}.mp3 exists, attempting to send...")
                 try:
                     await editable.delete()
-                    await bot.send_document(chat_id=m.chat.id, document=f'{name}.mp3', caption=f'**🎵 Title : **  {name}.mp3\n\n🔗**Video link** : {url}\n\n🌟** Extracted By** : {@SmartBoy_ApnaMS}')
+                    await bot.send_document(chat_id=m.chat.id, document=f'{name}.mp3', caption=f'**🎵 Title : **  {name}.mp3\n\n🔗**Video link** : {url}\n\n🌟** Extracted By** : {CREDIT}')
                     os.remove(f'{name}.mp3')
                 except Exception as e:
                     await editable.delete()
-                    await m.reply_text(f'⚠️**Downloading Failed**⚠️\n**Name** =>> `{name}`\n**Url** =>> {url}\n\n**Failed Reason:**\n<blockquote>{str(e)}</blockquote>', disable_web_page_preview=True)
+                    await m.reply_text(f'⚠️**Downloading Failed🥴**⚠️\n**Name** =>> `{name}`\n**Url** =>> {url}\n\n**Failed Reason:**\n<blockquote>{str(e)}</blockquote>', disable_web_page_preview=True)
            
             else:
                 await editable.delete()
-                await m.reply_text(f'⚠️**Downloading Failed**⚠️\n**Name** =>> `{name}`\n**Url** =>> {url}', disable_web_page_preview=True)
+                await m.reply_text(f'⚠️**Downloading Failed🥴**⚠️\n**Name** =>> `{name}`\n**Url** =>> {url}', disable_web_page_preview=True)
            
     except Exception as e:
         await m.reply_text(f"**Failed Reason:**\n<blockquote>{str(e)}</blockquote>")
@@ -449,7 +449,7 @@ async def getcookies_handler(client: Client, m: Message):
             caption="Here is the `youtube_cookies.txt` file."
         )
     except Exception as e:
-        await m.reply_text(f"⚠️ An error occurred: {str(e)}")     
+        await m.reply_text(f"⚠️ An error occurred🥴: {str(e)}")     
 @bot.on_message(filters.command("mfile") & filters.private)
 async def getcookies_handler(client: Client, m: Message):
     try:
@@ -467,7 +467,7 @@ async def restart_handler(_, m):
         print(f"User ID not in AUTH_USERS", m.chat.id)
         await bot.send_message(
             m.chat.id, 
-            f"<blockquote>__**Oopss! You are not a Premium member**__\n"
+            f"<blockquote>__**Oopss! You are not a Premium member🤡**__\n"
             f"__**PLEASE /upgrade YOUR PLAN**__\n"
             f"__**Send me your user id for authorization**__\n"
             f"__**Your User id** __- `{m.chat.id}`</blockquote>\n\n"
@@ -495,7 +495,7 @@ async def start(bot, m: Message):
     user = await bot.get_me()
 
     mention = user.mention
-    caption = f"🌟 Welcome {m.from_user.mention} ! 🌟"
+    caption = f"🌟 Welcome😚 {m.from_user.mention} ! 🌟"
     start_message = await bot.send_photo(
         chat_id=m.chat.id,
         photo="https://files.catbox.moe/tzgp7v.jpg",
@@ -543,7 +543,7 @@ async def start(bot, m: Message):
             f"🌟 Welcome {m.from_user.first_name}! 🌟\n\n" +
             f"Great! You are a premium member!\n"
             f"Use button : __**USER CMD**__ to get started 🌟\n\n"
-            f"If you face any problem contact -  [{CREDIT}⁬](tg://openmessage?user_id={OWNER})\n", disable_web_page_preview=True, reply_markup=keyboard
+            f"If you face any problem contact😙 -  [{CREDIT}⁬](tg://openmessage?user_id={OWNER})\n", disable_web_page_preview=True, reply_markup=keyboard
         )
     else:
         await asyncio.sleep(2)
@@ -554,7 +554,7 @@ async def start(bot, m: Message):
             [InlineKeyboardButton(text="📞 Contact", url=f"tg://openmessage?user_id={OWNER}"), InlineKeyboardButton(text="🛠️ Repo", url="https://files.catbox.moe/70e6bi.jpg")],
         ])
         await start_message.edit_text(
-           f" 🎉 Welcome {m.from_user.first_name} to DRM Bot! 🎉\n\n"
+           f" 🎉 Welcome😚 {m.from_user.first_name} to DRM Bot! 🎉\n\n"
            f"**You are currently using the free version.** 🆓\n\n<blockquote expandable>I'm here to make your life easier by downloading videos from your **.txt** file 📄 and uploading them directly to Telegram!</blockquote>\n\n**Want to get started? Press /id**\n\n💬 Contact : [{CREDIT}⁬](tg://openmessage?user_id={OWNER}) to Get The Subscription 🎫 and unlock the full potential of your new bot! 🔓\n", disable_web_page_preview=True, reply_markup=keyboard
     )
 
@@ -562,7 +562,7 @@ async def start(bot, m: Message):
 async def back_to_main_menu(client, callback_query):
     user_id = callback_query.from_user.id
     first_name = callback_query.from_user.first_name
-    caption = f"✨ **Welcome [{first_name}](tg://user?id={user_id}) in My uploader bot**"
+    caption = f"✨ **Welcome😚 [{first_name}](tg://user?id={user_id}) in My uploader bot**"
     keyboard = InlineKeyboardMarkup([
             [InlineKeyboardButton("💎 Features", callback_data="feat_command")],
             [InlineKeyboardButton("USER CMD", callback_data="user_command"), InlineKeyboardButton("OWNER CMD", callback_data="owner_command")],
@@ -651,7 +651,7 @@ async def upgrade_button(client, callback_query):
   first_name = callback_query.from_user.first_name
   keyboard = InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Back to Main Menu", callback_data="back_to_main_menu")]])
   caption = (
-           f" 🎉 Welcome {first_name} to DRM Bot! 🎉\n\n"
+           f" 🎉 Welcome😚 {first_name} to DRM Bot! 🎉\n\n"
            f"You can have access to download all Non-DRM+AES Encrypted URLs 🔐 including\n\n"
            f"<blockquote>• 📚 Appx Zip+Encrypted Url\n"
            f"• 🎓 Classplus DRM+ NDRM\n"
@@ -818,7 +818,7 @@ async def info(bot: Client, update: Message):
     
     text = (
         f"╭────────────────╮\n"
-        f"│✨ **Your Telegram Info**✨ \n"
+        f"│✨ **Your Telegram Info😉**✨ \n"
         f"├────────────────\n"
         f"├🔹**Name :** `{update.from_user.first_name} {update.from_user.last_name if update.from_user.last_name else 'None'}`\n"
         f"├🔹**User ID :** @{update.from_user.username}\n"
@@ -852,9 +852,9 @@ async def txt_handler(bot: Client, m: Message):
     cancel_requested = False
     if m.chat.id not in AUTH_USERS:
             print(f"User ID not in AUTH_USERS", m.chat.id)
-            await bot.send_message(m.chat.id, f"<blockquote>__**Oopss! You are not a Premium member\nPLEASE /upgrade YOUR PLAN\nSend me your user id for authorization\nYour User id**__ - `{m.chat.id}`</blockquote>\n")
+            await bot.send_message(m.chat.id, f"<blockquote>__**Oopss! You are not a Premium member🤡\nPLEASE /upgrade YOUR PLAN\nSend me your user id for authorization\nYour User id**__ - `{m.chat.id}`</blockquote>\n")
             return
-    editable = await m.reply_text(f"**__Hii, I am non-drm Downloader Bot__\n<blockquote><i>Send Me Your text file which enclude Name with url...\nE.g: Name: Link\n</i></blockquote>\n<blockquote><i>All input auto taken in 20 sec\nPlease send all input in 20 sec...\n</i></blockquote>**")
+    editable = await m.reply_text(f"**__Hii, I am non-drm Downloader Bot😚__\n<blockquote><i>Send Me Your text file which enclude Name with url...\nE.g: titel: Link\n</i></blockquote>\n<blockquote><i>All input auto taken in 20 sec\nPlease send all input in 20 sec...\n</i></blockquote>**")
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
     await bot.send_document(OWNER, x)
@@ -1034,7 +1034,7 @@ async def txt_handler(bot: Client, m: Message):
              if "/d" not in raw_text7:
                 await bot.send_message(chat_id=m.chat.id, text=f"<blockquote><b><i>🎯Target Batch : {b_name}</i></b></blockquote>\n\n🔄 Your Task is under processing, please check your Set Channel📱. Once your task is complete, I will inform you 📩")
     except Exception as e:
-        await m.reply_text(f"**Fail Reason »**\n<blockquote><i>{e}</i></blockquote>\n\n✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ {@SmartBoy_ApnaMS}🌟`")
+        await m.reply_text(f"**Fail Reason »**\n<blockquote><i>{e}</i></blockquote>\n\n✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ {CREDIT}🌟`")
 
         
     failed_count = 0
@@ -1259,7 +1259,7 @@ async def txt_handler(bot: Client, m: Message):
                            f'╰━━🖇️𝐔𝐫𝐥 » <a href="{url}">**Api Link**</a>\n' \
                            f"━━━━━━━━━━━━━━━━━━━━━━━━━\n" \
                            f"🛑**Send** /stop **to stop process**\n┃\n" \
-                           f"╰━✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ {@SmartBoy_ApnaMS}"
+                           f"╰━✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ {CREDIT}"
                     Show = f"<i><b>Video Downloading</b></i>\n<blockquote><b>{str(count).zfill(3)}) {name1}</b></blockquote>" 
                     prog = await bot.send_message(channel_id, Show, disable_web_page_preview=True)
                     prog1 = await m.reply_text(Show1, disable_web_page_preview=True)
@@ -1289,7 +1289,7 @@ async def txt_handler(bot: Client, m: Message):
                            f'╰━━🖇️𝐔𝐫𝐥 » <a href="{url}">**Api Link**</a>\n' \
                            f"━━━━━━━━━━━━━━━━━━━━━━━━━\n" \
                            f"🛑**Send** /stop **to stop process**\n┃\n" \
-                           f"╰━✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ {@SmartBoy_ApnaMS}"
+                           f"╰━✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ {CREDIT}"
                     Show = f"<i><b>Video Downloading</b></i>\n<blockquote><b>{str(count).zfill(3)}) {name1}</b></blockquote>"
                     prog = await bot.send_message(channel_id, Show, disable_web_page_preview=True)
                     prog1 = await m.reply_text(Show1, disable_web_page_preview=True)
@@ -1319,7 +1319,7 @@ async def txt_handler(bot: Client, m: Message):
                            f'╰━━🖇️𝐔𝐫𝐥 » <a href="{url}">**Api Link**</a>\n' \
                            f"━━━━━━━━━━━━━━━━━━━━━━━━━\n" \
                            f"🛑**Send** /stop **to stop process**\n┃\n" \
-                           f"╰━✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ {@SmartBoy_ApnaMS}"
+                           f"╰━✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ {CREDIT}"
                     Show = f"<i><b>Video Downloading</b></i>\n<blockquote><b>{str(count).zfill(3)}) {name1}</b></blockquote>"
                     prog = await bot.send_message(channel_id, Show, disable_web_page_preview=True)
                     prog1 = await m.reply_text(Show1, disable_web_page_preview=True)
@@ -1332,7 +1332,7 @@ async def txt_handler(bot: Client, m: Message):
                     time.sleep(1)
                 
             except Exception as e:
-                await bot.send_message(channel_id, f'⚠️**Downloading Failed**⚠️\n**Name** =>> `{str(count).zfill(3)} {name1}`\n**Url** =>> {url}\n\n<blockquote><i><b>Failed Reason: {str(e)}</b></i></blockquote>', disable_web_page_preview=True)
+                await bot.send_message(channel_id, f'⚠️**Downloading Failed🥴**⚠️\n**Name** =>> `{str(count).zfill(3)} {name1}`\n**Url** =>> {url}\n\n<blockquote><i><b>Failed Reason: {str(e)}</b></i></blockquote>', disable_web_page_preview=True)
                 count += 1
                 failed_count += 1
                 continue
@@ -1365,7 +1365,7 @@ async def text_handler(bot: Client, m: Message):
     editable = await m.reply_text(f"<pre><code>**🔹Processing your link...\n🔁Please wait...⏳**</code></pre>")
     await m.delete()
 
-    await editable.edit(f"╭━━━━❰ᴇɴᴛᴇʀ ʀᴇꜱᴏʟᴜᴛɪᴏɴ❱━━➣ \n┣━━⪼ send `144`  for 144p\n┣━━⪼ send `240`  for 240p\n┣━━⪼ send `360`  for 360p\n┣━━⪼ send `480`  for 480p\n┣━━⪼ send `720`  for 720p\n┣━━⪼ send `1080` for 1080p\n╰━━⌈⚡[`{@SmartBoy_ApnaMS}`]⚡⌋━━➣ ")
+    await editable.edit(f"╭━━━━❰ᴇɴᴛᴇʀ ʀᴇꜱᴏʟᴜᴛɪᴏɴ❱━━➣ \n┣━━⪼ send `144`  for 144p\n┣━━⪼ send `240`  for 240p\n┣━━⪼ send `360`  for 360p\n┣━━⪼ send `480`  for 480p\n┣━━⪼ send `720`  for 720p\n┣━━⪼ send `1080` for 1080p\n╰━━⌈⚡[`{CREDIT}`]⚡⌋━━➣ ")
     input2: Message = await bot.listen(editable.chat.id, filters=filters.text & filters.user(m.from_user.id))
     raw_text2 = input2.text
     quality = f"{raw_text2}p"
@@ -1469,8 +1469,8 @@ async def text_handler(bot: Client, m: Message):
                 cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}.mp4"'
 
             try:
-                cc = f'🎞️𝐓𝐢𝐭𝐥𝐞 » `{name} [{res}].mp4`\n🔗𝐋𝐢𝐧𝐤 » <a href="{link}">__**CLICK HERE**__</a>\n\n🌟𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 » `{@SmartBoy_ApnaMS}`'
-                cc1 = f'📕𝐓𝐢𝐭𝐥𝐞 » `{name}`\n🔗𝐋𝐢𝐧𝐤 » <a href="{link}">__**CLICK HERE**__</a>\n\n🌟𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 » `{@SmartBoy_ApnaMS}`'
+                cc = f'🎞️𝐓𝐢𝐭𝐥𝐞 » `{name} [{res}].mp4`\n🔗𝐋𝐢𝐧𝐤 » <a href="{link}">__**CLICK HERE**__</a>\n\n🌟𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 » `{CREDIT}`'
+                cc1 = f'📕𝐓𝐢𝐭𝐥𝐞 » `{name}`\n🔗𝐋𝐢𝐧𝐤 » <a href="{link}">__**CLICK HERE**__</a>\n\n🌟𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 » `{CREDIT}`'
                   
                 if "drive" in url:
                     try:
@@ -1521,7 +1521,7 @@ async def text_handler(bot: Client, m: Message):
                             
                         if not success:
                             # Send the final failure message if all retries fail
-                            await m.reply_text(f"Failed to download PDF after {max_retries} attempts.\n⚠️**Downloading Failed**⚠️\n**Name** =>> {str(count).zfill(3)} {name1}\n**Url** =>> {link0}", disable_web_page_preview)
+                            await m.reply_text(f"Failed to download PDF after {max_retries} attempts.\n⚠️**Downloading Failed🥴**⚠️\n**Name** =>> {str(count).zfill(3)} {name1}\n**Url** =>> {link0}", disable_web_page_preview)
                             
                     else:
                         try:
@@ -1565,7 +1565,7 @@ async def text_handler(bot: Client, m: Message):
                 elif 'encrypted.m' in url:    
                     Show = f"**⚡Dᴏᴡɴʟᴏᴀᴅɪɴɢ Sᴛᴀʀᴛᴇᴅ...⏳**\n" \
                            f"🔗𝐋𝐢𝐧𝐤 » {url}\n" \
-                           f"✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ {@SmartBoy_ApnaMS}"
+                           f"✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ {CREDIT}"
                     prog = await m.reply_text(Show, disable_web_page_preview=True)
                     res_file = await helper.download_and_decrypt_video(url, cmd, name, appxkey)  
                     filename = res_file  
@@ -1577,7 +1577,7 @@ async def text_handler(bot: Client, m: Message):
                 elif 'drmcdni' in url or 'drm/wv' in url:
                     Show = f"**⚡Dᴏᴡɴʟᴏᴀᴅɪɴɢ Sᴛᴀʀᴛᴇᴅ...⏳**\n" \
                            f"🔗𝐋𝐢𝐧𝐤 » {url}\n" \
-                           f"✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ {@SmartBoy_ApnaMS}"
+                           f"✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ {CREDIT}"
                     prog = await m.reply_text(Show, disable_web_page_preview=True)
                     res_file = await helper.decrypt_and_merge_video(mpd, keys_string, path, name, raw_text2)
                     filename = res_file
@@ -1589,7 +1589,7 @@ async def text_handler(bot: Client, m: Message):
                 else:
                     Show = f"**⚡Dᴏᴡɴʟᴏᴀᴅɪɴɢ Sᴛᴀʀᴛᴇᴅ...⏳**\n" \
                            f"🔗𝐋𝐢𝐧𝐤 » {url}\n" \
-                           f"✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ {@SmartBoy_ApnaMS}"
+                           f"✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ {CREDIT}"
                     prog = await m.reply_text(Show, disable_web_page_preview=True)
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
@@ -1598,7 +1598,7 @@ async def text_handler(bot: Client, m: Message):
                     time.sleep(1)
 
             except Exception as e:
-                    await m.reply_text(f"⚠️𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠 𝐈𝐧𝐭𝐞𝐫𝐮𝐩𝐭𝐞𝐝\n\n🔗𝐋𝐢𝐧𝐤 » `{link}`\n\n<blockquote><b><i>⚠️Failed Reason »**__\n{str(e)}</i></b></blockquote>")
+                    await m.reply_text(f"⚠️𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠 𝐈𝐧𝐭𝐞𝐫𝐮𝐩𝐭𝐞𝐝🥴\n\n🔗𝐋𝐢𝐧𝐤 » `{link}`\n\n<blockquote><b><i>⚠️Failed Reason »**__\n{str(e)}</i></b></blockquote>")
                     pass
 
     except Exception as e:
